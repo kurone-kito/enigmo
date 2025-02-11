@@ -1,5 +1,15 @@
 {
-  "compilerOptions": { "noEmit": true },
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "outDir": "dist",
+    "rootDir": "src",
+    "types": ["node"]
+  },
+  "exclude": ["*.config.mts", "*.spec.mts", "node_modules"],
   "extends": "@kurone-kito/typescript-config/tsconfig.json",
-  "include": ["./**/*.mjs", "./**/*.mts"]
+  "include": ["./**/*.mts"]
 }

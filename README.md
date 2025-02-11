@@ -7,6 +7,8 @@ It runs on Node.js.
 ```sh
 corepack enable
 pnpm install
+pnpm run build
+pnpm start
 ```
 
 ## Rules for Development

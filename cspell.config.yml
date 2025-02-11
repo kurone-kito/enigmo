@@ -6,6 +6,7 @@ cache:
 import:
   - '@kurone-kito/cspell-config'
 ignorePaths:
+  - dist
   - node_modules
 version: '0.2'
 words:
