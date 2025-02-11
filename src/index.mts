@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-console.log('Hello, world!');
+import { initializedCells } from './entities/initializedCells.mjs';
+
+console.log(initializedCells);
