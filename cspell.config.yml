@@ -8,3 +8,6 @@ import:
 ignorePaths:
   - node_modules
 version: '0.2'
+words:
+  - enigmo
+  - vocaloid
