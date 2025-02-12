@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,vim,visualstudiocode,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,vim,visualstudiocode,windows
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,react,vim,visualstudiocode,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,react,vim,visualstudiocode,windows
 
 ### Linux ###
 *~
@@ -147,7 +147,7 @@ dist
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
-public
+# public
 
 # vuepress build output
 .vuepress/dist
@@ -188,6 +188,19 @@ public
 
 # SvelteKit build / generate output
 .svelte-kit
+
+### react ###
+.DS_*
+**/*.backup.*
+**/*.back.*
+
+node_modules
+
+*.sublime*
+
+psd
+thumb
+sketch
 
 ### Vim ###
 # Swap
@@ -254,11 +267,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,vim,visualstudiocode,windows
-
-### THE PROJECT SPECIFIES #################################################
-
-### Node ###
-# Vite
-vite*.config.[cm][jt]s.timestamp-*
-vite*.config.[jt]s.timestamp-*
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,react,vim,visualstudiocode,windows

@@ -41,18 +41,23 @@
     "test:es": "vitest run",
     "test:ts": "tsc --noEmit --skipLibCheck"
   },
+  "dependencies": {
+    "ink": "^5.1.0",
+    "react": "^18.3.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "@cspell/cspell-types": "^8.17.3",
     "@kurone-kito/commitlint-config": "^0.17.4-alpha.1",
     "@kurone-kito/cspell-config": "^0.17.4-alpha.1",
-    "@kurone-kito/eslint-config-base": "^0.17.2",
+    "@kurone-kito/eslint-config-react": "^0.17.2",
     "@kurone-kito/lint-staged-config": "^0.17.4-alpha.1",
     "@kurone-kito/markdownlint-config": "^0.17.4-alpha.1",
     "@kurone-kito/prettier-config": "^0.17.4-alpha.1",
     "@kurone-kito/typescript-config": "^0.17.4-alpha.1",
     "@types/node": "^22.13.1",
+    "@types/react": "^18.3.18",
     "@typescript-eslint/parser": "^8.24.0",
     "chalk": "^5.4.1",
     "cspell": "^8.17.3",

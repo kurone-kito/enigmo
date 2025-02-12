@@ -3,13 +3,14 @@
     "composite": false,
     "declaration": false,
     "declarationMap": false,
+    "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "outDir": "dist",
     "rootDir": "src",
     "types": ["node"]
   },
-  "exclude": ["*.config.mts", "*.spec.mts", "node_modules"],
+  "exclude": ["*.config.mts", "*.spec.mts", "*.spec.tsx", "node_modules"],
   "extends": "@kurone-kito/typescript-config/tsconfig.json",
-  "include": ["./**/*.mts"]
+  "include": ["./**/*.mts", "./**/*.tsx"]
 }

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import { start } from './App.js';
 import { initializedCells } from './entities/initializedCells.mjs';
 
-console.log(initializedCells);
+await start(initializedCells);
+process.exit();
