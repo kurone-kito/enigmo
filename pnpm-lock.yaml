@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      genetic-search:
+        specifier: ^13.4.0
+        version: 13.4.0
+      genetic-search-multiprocess:
+        specifier: ^8.4.0
+        version: 8.4.0
       ink:
         specifier: ^5.1.0
         version: 5.1.0(@types/react@18.3.18)(react@18.3.1)
@@ -2042,6 +2048,12 @@ packages:
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
 
+  genetic-search-multiprocess@8.4.0:
+    resolution: {integrity: sha512-EbkCcLW6tE5UmZzps/htNQLxNIqBk8lQRP9AKZrO3Hn38SpqHXwy68vRFtqCmpJFs0jXzrGMz+lmhAmKQpfXBQ==}
+
+  genetic-search@13.4.0:
+    resolution: {integrity: sha512-sbNirGpSizTNk5mA07accuBQwqub3avIBF5wxVQl0F6bsiNDcQB5YUpcYWsJvv8eEsF6AYo2EXk8BKlPo8vtQg==}
+
   gensequence@7.0.0:
     resolution: {integrity: sha512-47Frx13aZh01afHJTB3zTtKIlFI6vWY+MYCN9Qpew6i52rfKjnhCF/l1YlC8UmEMvvntZZ6z4PiCcmyuedR2aQ==}
     engines: {node: '>=18'}
@@ -2789,6 +2801,9 @@ packages:
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+
+  multiprocessor@2.0.3:
+    resolution: {integrity: sha512-b+j12gsm/VOVRxkaW1AyGWA1OaZFj264JvofoiyLXh2W5tUCMohrN5AMB3HJewaSkbJfIEG9W7p3Wpdh2pfZIg==}
 
   mvdan-sh@0.10.1:
     resolution: {integrity: sha512-kMbrH0EObaKmK3nVRKUIIya1dpASHIEusM13S4V1ViHFuxuNxCo+arxoa6j/dbV22YBGjl7UKJm9QQKJ2Crzhg==}
@@ -5896,6 +5911,13 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
+  genetic-search-multiprocess@8.4.0:
+    dependencies:
+      genetic-search: 13.4.0
+      multiprocessor: 2.0.3
+
+  genetic-search@13.4.0: {}
+
   gensequence@7.0.0: {}
 
   get-caller-file@2.0.5: {}
@@ -6851,6 +6873,8 @@ snapshots:
   minipass@7.1.2: {}
 
   ms@2.1.3: {}
+
+  multiprocessor@2.0.3: {}
 
   mvdan-sh@0.10.1: {}
 

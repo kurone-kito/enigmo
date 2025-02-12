@@ -1,18 +1,10 @@
 #!/usr/bin/env node
 
+import { createInstance } from './genetic/createInstance.mjs';
 import { start } from './App.js';
-import { initializedCells } from './entities/initializedCells.mjs';
-import { move } from './entities/move.mjs';
 
-const moved = move({
-  cells: move({
-    cells: initializedCells,
-    target: 1,
-    vector: { dir: 'y', velocity: -1 },
-  }),
-  target: 2,
-  vector: { dir: 'x', velocity: 1 },
-});
+const search = createInstance();
+await search.fit({ beforeStep: console.log, generationsCount: 200 });
 
-await start(moved);
+await start(search.bestGenome.sequence);
 process.exit();

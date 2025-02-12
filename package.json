@@ -42,6 +42,8 @@
     "test:ts": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
+    "genetic-search": "^13.4.0",
+    "genetic-search-multiprocess": "^8.4.0",
     "ink": "^5.1.0",
     "react": "^18.3.1"
   },
