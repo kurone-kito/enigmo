@@ -1,51 +1,14 @@
-# 📄 PNPM project template
+# 🧩 Enigmo
 
-## Features
-
-- PNPM
-- TypeScript
-- ESLint
-- Prettier
-- Commitlint with Husky
-- Visual Studio Code / Vim ready
-- CI configurations
-  - CodeRabbit
-  - Dependabot
-  - GitHub Actions
-
-## System Requirements
-
-- Node.js
-  - Hydrogen LTS (`^18.20.4`)
-  - Iron LTS (`^20.10`)
-  - `>=22`
-
-## Install the dependencies
+This application is a puzzle game simulation that
+appears in the VOCALOID song “NULLRISE” music video.
+It runs on Node.js.
 
 ```sh
 corepack enable
 pnpm install
-```
-
-## Linting
-
-```sh
-pnpm run lint
-pnpm run lint:fix # Lint and auto-fix
-```
-
-## Testing
-
-```sh
-pnpm run test
-```
-
-Currently, the command works as an alias for the `pnpm run lint` command.
-
-## Cleaning
-
-```sh
-pnpm run clean
+pnpm run build
+pnpm start
 ```
 
 ## Rules for Development
