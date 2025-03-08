@@ -36,9 +36,19 @@ const retype = (seq: Sequence[]): Sequences => Object.freeze(seq) as Sequences;
  */
 export const randomSequences = (): Sequences =>
   retype(
-    Array.from({ length: TURNS }, (__, index) =>
-      randomSequence(index % 2 ? 1 : 2),
-    ),
+    Array.from({ length: TURNS }, (__, index) => {
+      const target = index % 2 ? 1 : 2;
+      const mod4 = index % 4;
+      const mode =
+        mod4 < 2
+          ? target === 1
+            ? 'flip'
+            : 'line'
+          : target === 1
+            ? 'line'
+            : 'flip';
+      return randomSequence({ mode, target });
+    }),
   );
 
 /**

@@ -1,4 +1,4 @@
-import { inRange } from '../utils/point.mjs';
+import { equals, inRange } from '../utils/point.mjs';
 import { getNeighbor, pointIsSameLine } from '../utils/vector.mjs';
 import type { Sequence } from './sequence.mjs';
 import type { Cells } from './types.mjs';
@@ -16,13 +16,15 @@ export interface ValidMoveParams extends Sequence {
  * @returns The result.
  */
 export const validMove = (params: ValidMoveParams): boolean => {
-  const { cells, target, vector } = params;
+  const { cells, mode, target, vector } = params;
   const index = find({ cells, target });
   const enemy = find({ cells, target: other(target) });
+  const neighbor = getNeighbor(index, vector);
   return (
     index >= 0 &&
     enemy >= 0 &&
-    inRange(getNeighbor(index, vector)) &&
-    !pointIsSameLine(index, enemy).includes(vector.dir)
+    inRange(neighbor) &&
+    !equals(neighbor, enemy) &&
+    (mode === 'flip' || !pointIsSameLine(index, enemy).includes(vector.dir))
   );
 };
