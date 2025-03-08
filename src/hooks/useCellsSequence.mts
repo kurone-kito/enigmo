@@ -1,5 +1,6 @@
 import { useApp } from 'ink';
 import { useEffect, useState } from 'react';
+import { BPM } from '../constants.mjs';
 import type { Cells } from '../entities/types.mjs';
 
 /**
@@ -11,7 +12,7 @@ export const useCellsSequence = (cellsSequence: readonly Cells[]) => {
   const [index, setIndex] = useState(cellsSequence.length - 1);
   const { exit } = useApp();
   useEffect(() => {
-    const timer = setInterval(() => setIndex((prev) => prev - 2), 60_000 / 190);
+    const timer = setInterval(() => setIndex((prev) => prev - 2), 60_000 / BPM);
     return () => clearInterval(timer);
   }, []);
   useEffect(() => {
