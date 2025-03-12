@@ -1,8 +1,11 @@
 import type { Vector } from '../utils/vector.mjs';
-import type { Target } from './types.mjs';
+import type { MoveMode, Target } from './types.mjs';
 
 /** Type definition that the sequence. */
 export interface Sequence {
+  /** The mode of the move. */
+  readonly mode: MoveMode;
+
   /** The target to move. */
   readonly target: Target;
 
@@ -12,12 +15,14 @@ export interface Sequence {
 
 /**
  * Generate a random sequence.
- * @param target The target to move.
+ * @param partial The sequence partial to generate.
  * @returns The generated sequence.
  */
-export const randomSequence = (target: Target): Sequence =>
+export const randomSequence = (
+  partial: Pick<Sequence, 'mode' | 'target'>,
+): Sequence =>
   Object.freeze<Sequence>({
-    target,
+    ...partial,
     vector: Object.freeze<Vector>({
       dir: Math.random() < 0.5 ? 'x' : 'y',
       velocity: Math.random() < 0.5 ? -1 : 1,
@@ -31,4 +36,4 @@ export const randomSequence = (target: Target): Sequence =>
  * @returns The mutated sequence.
  */
 export const mutateSequence = (source: Sequence, threshold = 0.8): Sequence =>
-  Math.random() > threshold ? source : randomSequence(source.target);
+  Math.random() > threshold ? source : randomSequence(source);

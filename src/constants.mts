@@ -1,6 +1,9 @@
 import type { ForegroundColorName } from 'chalk';
 import type { Add, Multiply } from 'type-plus';
 
+/** the bpm of the music */
+export const BPM = 190;
+
 /** the width of the cells */
 export const WIDTH = 9;
 

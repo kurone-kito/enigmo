@@ -20,6 +20,9 @@ export type CellsIndex = IntRange<0, typeof CELLS>;
 /** Type definition that the color index. */
 export type ColorsIndex = ArrayIndex<typeof COLORS>;
 
+/** Type definition that the move mode. */
+export type MoveMode = 'flip' | 'line';
+
 /** Type definition that a special cell. */
 export interface Special extends CellBase {
   /** The color index. */

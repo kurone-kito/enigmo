@@ -44,6 +44,18 @@ export const pointToIndex = (from: Point | number): number => {
 };
 
 /**
+ * determine the two points are equals.
+ * @param a The point or index.
+ * @param b The point or index.
+ * @returns Whether the two points are equals.
+ */
+export const equals = (a: Point | number, b: Point | number): boolean => {
+  const { x: ax, y: ay } = indexToPoint(a);
+  const { x: bx, y: by } = indexToPoint(b);
+  return ax === bx && ay === by;
+};
+
+/**
  * determine whether the point is in the range.
  * @param value The point.
  * @returns Whether the point is in the range.

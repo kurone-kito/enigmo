@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import type { Point } from './point.mjs';
 import {
   addPoint,
+  equals,
   indexToPoint,
   inRange,
   pointToIndex,
@@ -22,6 +23,21 @@ describe('addPoint', () => {
     ],
   ])('(a: %o, b: %o) => %o', (a, b, expected) =>
     expect(addPoint(a, b)).toEqual(expected),
+  );
+});
+
+describe('equals', () => {
+  it.each<[a: Point | number, b: Point | number, expected: boolean]>([
+    [0, 0, true],
+    [0, 1, false],
+    [1, 0, false],
+    [1, 1, true],
+    [{ x: 0, y: 0 }, { x: 0, y: 0 }, true],
+    [{ x: 0, y: 0 }, { x: 0, y: 1 }, false],
+    [{ x: 0, y: 1 }, { x: 0, y: 0 }, false],
+    [{ x: 0, y: 1 }, { x: 0, y: 1 }, true],
+  ])('(a: %o, b: %o) => %s', (a, b, expected) =>
+    expect(equals(a, b)).toBe(expected),
   );
 });
 
